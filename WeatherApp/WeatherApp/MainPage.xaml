@@ -7,23 +7,103 @@
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
 
-    <StackLayout>
-        <Frame x:Name="top_frame">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="#D0D0D0" FontSize="36"/>
+        <StackLayout Orientation="Horizontal">
+            <ImageButton x:Name="menu_btn" Source="menu.png"  Clicked="MenuBtn_Clicked" WidthRequest="40" HeightRequest="40"  VerticalOptions="Start" Margin="10,25" BackgroundColor="Transparent"></ImageButton>
+            <Label Text="LONDON, GB" TextColor="#EBEBEB" FontSize="25" Margin="10,25"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="100,100,0,0">
+            <Image Source="cloudrain.png" WidthRequest="70" HeightRequest="70" Margin="0,0,0,570" />
+            <Label Text="12" FontSize="70" FontAttributes="Bold" TextColor="White"/>
+            <Label Text="°C" FontSize="35" TextColor="White" Margin="0,25,0,0"/>
+        </StackLayout>
+        <Label Text="Light intensity, drizzle rain" FontSize="20" TextColor="White"  HorizontalOptions="Center" Margin="0,200,0,0"/>
+        <Label Text="June 15, 09:03 AM" FontSize="15" TextColor="White"  HorizontalOptions="Center" Margin="0,240,0,0"/>
+
+        <Frame HasShadow="True"   Opacity="0.9"  BackgroundColor="#568EFD" Margin="10, 320,10,0" Padding="0" HeightRequest="140" CornerRadius="10" VerticalOptions="Start">
+            <Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="humidity.png" HeightRequest="25" Margin="0,10"/>
+                        <Label Text="50%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        <Label Text="Humidity" FontSize="15" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="wind.png" HeightRequest="25" Margin="0,10"/>
+                        <Label Text="2.6 m/s" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        <Label Text="Wind" FontSize="15" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="pressure.png" HeightRequest="25" Margin="0,10"/>
+                        <Label Text="1011 hpa" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        <Label Text="Pressure" FontSize="15" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="cloudiness.png" HeightRequest="25" Margin="0,10"/>
+                        <Label Text="24%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        <Label Text="Cloudiness" FontSize="15" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+
+        <Frame HasShadow="True"  Opacity="0.8" BackgroundColor="#4181FF" Margin="10, 500,10,0" Padding="0" HeightRequest="200" CornerRadius="10" VerticalOptions="Start">
+            
+            <Grid>
+                <Label Text="Daily" HorizontalOptions="Center" TextColor="#3C3C3C" FontAttributes="Bold" FontSize="35"/>
+                <ScrollView BackgroundColor="#4A87FF" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,60,0,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="25">
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="12°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text=" Today" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Thu" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="15°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Fri" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="18°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Sat" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="9°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Sun" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="12°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Mon" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label Text="19°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                            <Label Text="Tue" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#3C3C3C"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Frame>
+        </Grid>
 
 </ContentPage>

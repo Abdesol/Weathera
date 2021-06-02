@@ -13,8 +13,14 @@ namespace WeatherApp
         public MainPage()
         {   
             InitializeComponent();
-            top_frame.BackgroundColor = Color.FromHex(ViewModel.half_screen_color);
-            top_frame.HeightRequest = ViewModel.half_screen_size;
+            //top_frame.BackgroundColor = Color.FromHex(ViewModel.half_screen_color);
+            //top_frame.HeightRequest = ViewModel.half_screen_size;
+        }
+        
+        public async void MenuBtn_Clicked(object sender, EventArgs args)
+        {
+            await menu_btn.ScaleTo(0.75, 100);
+            await menu_btn.ScaleTo(1, 100);
         }
 
     }
