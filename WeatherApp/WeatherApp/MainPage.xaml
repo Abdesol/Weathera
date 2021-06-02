@@ -27,25 +27,25 @@
             <Grid>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
                     <StackLayout Orientation="Vertical">
-                        <Image Source="humidity.png" HeightRequest="25" Margin="0,10"/>
+                        <Image Source="humidity.png" HeightRequest="35" Margin="0,10"/>
                         <Label Text="50%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Humidity" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
-                        <Image Source="wind.png" HeightRequest="25" Margin="0,10"/>
+                        <Image Source="wind.png" HeightRequest="35" Margin="0,10" />
                         <Label Text="2.6 m/s" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Wind" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
-                        <Image Source="pressure.png" HeightRequest="25" Margin="0,10"/>
+                        <Image Source="pressure.png" HeightRequest="35" Margin="0,10"/>
                         <Label Text="1011 hpa" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Pressure" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
-                        <Image Source="cloudiness.png" HeightRequest="25" Margin="0,10"/>
+                        <Image Source="cloudiness.png" HeightRequest="35" Margin="0,10"/>
                         <Label Text="24%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Cloudiness" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
