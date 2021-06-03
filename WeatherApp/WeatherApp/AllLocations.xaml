@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.AllLocations">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton x:Name="back_btn" Source="back.png"  Clicked="Back_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

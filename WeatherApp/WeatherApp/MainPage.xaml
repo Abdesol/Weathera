@@ -7,13 +7,20 @@
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>
+    
 
     <Grid>
         <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
 
         <StackLayout Orientation="Horizontal">
-            <ImageButton x:Name="menu_btn" Source="menu.png"  Clicked="MenuBtn_Clicked" WidthRequest="40" HeightRequest="40"  VerticalOptions="Start" Margin="10,25" BackgroundColor="Transparent"></ImageButton>
-            <Label Text="LONDON, GB" TextColor="#EBEBEB" FontSize="25" Margin="10,25"/>
+            <ImageButton x:Name="location_btn" Source="location.png"  Clicked="ChangeLoc_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
+            
+            <Label x:Name="current_location"  Text="LONDON, GB" TextColor="#EBEBEB" FontSize="25" Margin="0,25"/>
+
+            <ImageButton x:Name="refresh_btn" Source="refresh.png"  Clicked="RefreshBtn_Clicked" WidthRequest="25"   VerticalOptions="Start" Margin="25,30" HorizontalOptions="End" BackgroundColor="Transparent"></ImageButton>
+
+            <Picker x:Name="locations" IsVisible="false"/>
+
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Margin="100,100,0,0">
@@ -106,4 +113,5 @@
             </Grid>
         </Frame>
         </Grid>
+
 </ContentPage>
