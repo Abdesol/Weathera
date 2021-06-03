@@ -10223,88 +10223,91 @@ namespace WeatherApp.Droid
 			public const int mtrl_text_btn_text_color_selector = 2131034287;
 			
 			// aapt resource value: 0x7F0500B5
-			public const int notification_action_color_filter = 2131034293;
+			public const int navigationBarColor = 2131034293;
 			
 			// aapt resource value: 0x7F0500B6
-			public const int notification_icon_bg_color = 2131034294;
+			public const int notification_action_color_filter = 2131034294;
 			
 			// aapt resource value: 0x7F0500B7
-			public const int notification_material_background_media_default_color = 2131034295;
+			public const int notification_icon_bg_color = 2131034295;
 			
 			// aapt resource value: 0x7F0500B8
-			public const int primary_dark_material_dark = 2131034296;
+			public const int notification_material_background_media_default_color = 2131034296;
 			
 			// aapt resource value: 0x7F0500B9
-			public const int primary_dark_material_light = 2131034297;
+			public const int primary_dark_material_dark = 2131034297;
 			
 			// aapt resource value: 0x7F0500BA
-			public const int primary_material_dark = 2131034298;
+			public const int primary_dark_material_light = 2131034298;
 			
 			// aapt resource value: 0x7F0500BB
-			public const int primary_material_light = 2131034299;
+			public const int primary_material_dark = 2131034299;
 			
 			// aapt resource value: 0x7F0500BC
-			public const int primary_text_default_material_dark = 2131034300;
+			public const int primary_material_light = 2131034300;
 			
 			// aapt resource value: 0x7F0500BD
-			public const int primary_text_default_material_light = 2131034301;
+			public const int primary_text_default_material_dark = 2131034301;
 			
 			// aapt resource value: 0x7F0500BE
-			public const int primary_text_disabled_material_dark = 2131034302;
+			public const int primary_text_default_material_light = 2131034302;
 			
 			// aapt resource value: 0x7F0500BF
-			public const int primary_text_disabled_material_light = 2131034303;
+			public const int primary_text_disabled_material_dark = 2131034303;
 			
 			// aapt resource value: 0x7F0500C0
-			public const int radiobutton_themeable_attribute_color = 2131034304;
+			public const int primary_text_disabled_material_light = 2131034304;
 			
 			// aapt resource value: 0x7F0500C1
-			public const int ripple_material_dark = 2131034305;
+			public const int radiobutton_themeable_attribute_color = 2131034305;
 			
 			// aapt resource value: 0x7F0500C2
-			public const int ripple_material_light = 2131034306;
+			public const int ripple_material_dark = 2131034306;
 			
 			// aapt resource value: 0x7F0500C3
-			public const int secondary_text_default_material_dark = 2131034307;
+			public const int ripple_material_light = 2131034307;
 			
 			// aapt resource value: 0x7F0500C4
-			public const int secondary_text_default_material_light = 2131034308;
+			public const int secondary_text_default_material_dark = 2131034308;
 			
 			// aapt resource value: 0x7F0500C5
-			public const int secondary_text_disabled_material_dark = 2131034309;
+			public const int secondary_text_default_material_light = 2131034309;
 			
 			// aapt resource value: 0x7F0500C6
-			public const int secondary_text_disabled_material_light = 2131034310;
+			public const int secondary_text_disabled_material_dark = 2131034310;
 			
 			// aapt resource value: 0x7F0500C7
-			public const int switch_thumb_disabled_material_dark = 2131034311;
+			public const int secondary_text_disabled_material_light = 2131034311;
 			
 			// aapt resource value: 0x7F0500C8
-			public const int switch_thumb_disabled_material_light = 2131034312;
+			public const int switch_thumb_disabled_material_dark = 2131034312;
 			
 			// aapt resource value: 0x7F0500C9
-			public const int switch_thumb_material_dark = 2131034313;
+			public const int switch_thumb_disabled_material_light = 2131034313;
 			
 			// aapt resource value: 0x7F0500CA
-			public const int switch_thumb_material_light = 2131034314;
+			public const int switch_thumb_material_dark = 2131034314;
 			
 			// aapt resource value: 0x7F0500CB
-			public const int switch_thumb_normal_material_dark = 2131034315;
+			public const int switch_thumb_material_light = 2131034315;
 			
 			// aapt resource value: 0x7F0500CC
-			public const int switch_thumb_normal_material_light = 2131034316;
+			public const int switch_thumb_normal_material_dark = 2131034316;
 			
 			// aapt resource value: 0x7F0500CD
-			public const int test_mtrl_calendar_day = 2131034317;
+			public const int switch_thumb_normal_material_light = 2131034317;
 			
 			// aapt resource value: 0x7F0500CE
-			public const int test_mtrl_calendar_day_selected = 2131034318;
+			public const int test_mtrl_calendar_day = 2131034318;
 			
 			// aapt resource value: 0x7F0500CF
-			public const int tooltip_background_dark = 2131034319;
+			public const int test_mtrl_calendar_day_selected = 2131034319;
 			
 			// aapt resource value: 0x7F0500D0
-			public const int tooltip_background_light = 2131034320;
+			public const int tooltip_background_dark = 2131034320;
+			
+			// aapt resource value: 0x7F0500D1
+			public const int tooltip_background_light = 2131034321;
 			
 			static Color()
 			{

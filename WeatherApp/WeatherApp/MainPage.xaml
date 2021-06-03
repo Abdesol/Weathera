@@ -7,6 +7,7 @@
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>
+
     <Grid>
         <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
 
@@ -57,7 +58,7 @@
             
             <Grid>
                 <Label Text="Daily" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="35"/>
-                <ScrollView BackgroundColor="#4A87FF" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,60,0,0">
+                <ScrollView BackgroundColor="#4A87F0" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,60,0,0">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="25">
                         <StackLayout Orientation="Vertical">
                             <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
@@ -105,5 +106,4 @@
             </Grid>
         </Frame>
         </Grid>
-
 </ContentPage>
