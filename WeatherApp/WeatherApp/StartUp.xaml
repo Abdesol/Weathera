@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.StartUp">
+    
+    <Grid>
+        <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
+
+        <Label Text="Weathera" FontSize="50" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" Margin="0,70"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="load.gif" HorizontalOptions="Center" IsAnimationPlaying="True" HeightRequest="65"/>
+            <Label Text="Loading" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Label Text="Made by Abdella Solomon" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+            <Label Text="Copyright ©2021 All rights reserved" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

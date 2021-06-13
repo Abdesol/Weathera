@@ -5,4 +5,5 @@
 	<color name="colorPrimaryDark">#22D0FD</color>
 	<color name="colorAccent">#FF4081</color>
 	<color name="navigationBarColor">#9544FF</color>
+  <color name="splash_background">#ffffff</color>
 </resources>

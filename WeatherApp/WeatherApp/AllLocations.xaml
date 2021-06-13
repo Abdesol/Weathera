@@ -7,8 +7,30 @@
             <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
             <StackLayout Orientation="Horizontal">
                 <ImageButton x:Name="back_btn" Source="back.png"  Clicked="Back_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
-
+                <Entry x:Name="search_entry"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="Center" 
+                       WidthRequest="250" Margin="0,25" 
+                       Placeholder="Locations" 
+                       PlaceholderColor="White"
+                       BackgroundColor="Transparent"
+                       />
+                <ImageButton x:Name="search_btn" Source="search.png"  Clicked="Search_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
+                
             </StackLayout>
+            <ScrollView Margin="20,75">
+                <StackLayout 
+                    x:Name="search_layout" 
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand" 
+                    WidthRequest="500" 
+                    Margin="40,0" 
+                    Spacing="10" 
+                    Opacity="0.8"
+                    > 
+                </StackLayout>
+            </ScrollView>
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

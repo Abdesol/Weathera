@@ -1,0 +1,22 @@
+[
+  {
+    "new_user": true
+  },
+
+  {
+    "consolidated_weather": [
+      {
+        "weather_state_name": "Heavy Cloud",
+        "weather_state_abbr": "hc",
+        "created": "2021-06-05T13:23:07.557229Z",
+        "the_temp": 22.715,
+        "wind_speed": 4.990682947721307,
+        "air_pressure": 1019.0,
+        "humidity": 40,
+        "visibility": 12.267731448341685
+      }
+    ],
+    "title": "Addis Ababa",
+    "woeid": 0
+  }
+]

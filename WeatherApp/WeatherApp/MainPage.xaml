@@ -4,114 +4,116 @@
              xmlns:local="clr-namespace:WeatherApp"
              x:Class="WeatherApp.MainPage">
 
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
-    
+
+
 
     <Grid>
+        <Image x:Name="InitialPage" Source="background.jpg" IsVisible="true" VerticalOptions="StartAndExpand"/>
         <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
 
         <StackLayout Orientation="Horizontal">
             <ImageButton x:Name="location_btn" Source="location.png"  Clicked="ChangeLoc_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
             
-            <Label x:Name="current_location"  Text="LONDON, GB" TextColor="#EBEBEB" FontSize="25" Margin="0,25"/>
+            <Label x:Name="current_location"  Text="" TextColor="#EBEBEB" FontSize="25" Margin="0,25"/>
 
             <ImageButton x:Name="refresh_btn" Source="refresh.png"  Clicked="RefreshBtn_Clicked" WidthRequest="25"   VerticalOptions="Start" Margin="25,30" HorizontalOptions="End" BackgroundColor="Transparent"></ImageButton>
-
-            <Picker x:Name="locations" IsVisible="false"/>
+            <Label x:Name="loading_label"  Text="loading..." IsVisible="false" TextColor="#EBEBEB" FontSize="15" Margin="0,27"/>
 
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Margin="100,100,0,0">
-            <Image Source="cloudrain.png" WidthRequest="70" HeightRequest="70" Margin="0,0,0,570" />
-            <Label Text="12" FontSize="70" FontAttributes="Bold" TextColor="White"/>
+            <Image x:Name="cloud_type" Source="" WidthRequest="70" HeightRequest="70" Margin="0,0,0,570" />
+            <Label x:Name="temp_l" Text="" FontSize="70" FontAttributes="Bold" TextColor="White"/>
             <Label Text="°C" FontSize="35" TextColor="White" Margin="0,25,0,0"/>
         </StackLayout>
-        <Label Text="Light intensity, drizzle rain" FontSize="20" TextColor="White"  HorizontalOptions="Center" Margin="0,200,0,0"/>
-        <Label Text="June 15, 09:03 AM" FontSize="15" TextColor="White"  HorizontalOptions="Center" Margin="0,240,0,0"/>
+        <Label x:Name="weather_desc" Text="" FontSize="20" TextColor="White"  HorizontalOptions="Center" Margin="0,200,0,0"/>
+        <Label x:Name="date_created" Text="" FontSize="15" TextColor="White"  HorizontalOptions="Center" Margin="0,240,0,0"/>
 
-        <Frame HasShadow="True"   Opacity="0.9"  BackgroundColor="#568EFD" Margin="10, 320,10,0" Padding="0" HeightRequest="140" CornerRadius="10" VerticalOptions="Start">
+
+        <Frame HasShadow="True" Opacity="0.9"  BackgroundColor="#568EFD" Margin="10,320" Padding="0" HeightRequest="140" CornerRadius="10" VerticalOptions="Start">
             <Grid>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
                     <StackLayout Orientation="Vertical">
                         <Image Source="humidity.png" HeightRequest="35" Margin="0,10"/>
-                        <Label Text="50%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Label x:Name="humidity_l" Text="" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Humidity" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <Image Source="wind.png" HeightRequest="35" Margin="0,10" />
-                        <Label Text="2.6 m/s" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Label x:Name="wind_l" Text="" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Wind" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <Image Source="pressure.png" HeightRequest="35" Margin="0,10"/>
-                        <Label Text="1011 hpa" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Label x:Name="pressure_l" Text="" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         <Label Text="Pressure" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <Image Source="cloudiness.png" HeightRequest="35" Margin="0,10"/>
-                        <Label Text="24%" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
-                        <Label Text="Cloudiness" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Label x:Name="visibility_l" Text="" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Label Text="Visibility" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
                     </StackLayout>
                 </StackLayout>
             </Grid>
         </Frame>
+        <!--
+        <Frame HasShadow="True" IsVisible="false"  Opacity="0.8" BackgroundColor="#4181FF" Margin="10, 500,10,0" Padding="0" HeightRequest="200" CornerRadius="10" VerticalOptions="Start">
 
-        <Frame HasShadow="True"  Opacity="0.8" BackgroundColor="#4181FF" Margin="10, 500,10,0" Padding="0" HeightRequest="200" CornerRadius="10" VerticalOptions="Start">
-            
             <Grid>
                 <Label Text="Daily" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="35"/>
-                <ScrollView BackgroundColor="#4A87F0" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,60,0,0">
+                <ScrollView BackgroundColor="#4A87F0" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,30,0,0">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="25">
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="12°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="today_stu" Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="today_temp" Text="12°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text=" Today" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_1_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_1_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Thu" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="15°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_2_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_2_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Fri" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="18°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_3_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_3_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Sat" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="9°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_4_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_4_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Sun" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="12°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_5_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_5_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Mon" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
-                            <Label Text="19°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Image x:Name="day_6_stu"  Source="cloudrain.png" HeightRequest="50" Margin="0,3"/>
+                            <Label x:Name="day_6_temp"  Text="22°C" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                             <Label Text="Tue" FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>
             </Grid>
-        </Frame>
-        </Grid>
+        </Frame>-->
+        
+    </Grid>
+
+    
 
 </ContentPage>
