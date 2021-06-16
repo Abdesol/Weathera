@@ -125,32 +125,6 @@ namespace WeatherApp
                 {
                     return new List<object>() { er };
                 }
-                /* this will be added on v2
-                foreach (string i in days_lst)
-                {
-                    
-                    bool istask_done = false;
-                    for (int ii = 0; ii < 3; ii++)
-                    {
-                        HttpResponseMessage response = await client.GetAsync($"api/location/{woeid}/{i}");
-                        if (response.IsSuccessStatusCode)
-                        {
-                            string data_request = await response.Content.ReadAsStringAsync();
-                            var data_parsed = JsonConvert.DeserializeObject<List<LeftJsonModel>>(data_request);
-
-                            LeftJsonModel data = data_parsed[0];
-                            output.Add(data);
-
-                            istask_done = true;
-                            break;
-                        }
-                        await Task.Delay(1);
-                    }
-                    if (istask_done == false)
-                    {
-                        return new List<object>() { er };
-                    }
-                }*/
             }
             else
             {
@@ -164,11 +138,8 @@ namespace WeatherApp
 
         }
 
-        public static async Task<List<Dictionary<string, object>>> SearchLoc(string search_text)
+        public static async Task<List<SearchModel>> SearchLoc(string search_text)
         {
-            var output = new List<Dictionary<string, object>>();
-            var er = new Dictionary<string, object>();
-            er.Add("Error", "True");
 
             using (var client = new HttpClient())
             {
@@ -179,23 +150,20 @@ namespace WeatherApp
                 if (response.IsSuccessStatusCode)
                 {
                     string info = await response.Content.ReadAsStringAsync();
-                    var info_parsed = JsonConvert.DeserializeObject<Dictionary<string, object>>(info);
-                    var d = new Dictionary<string, object>();
-                    d.Add("title", (string)d["title"]);
-                    d.Add("woeid", (string)d["woeid"]);
-                    output.Add(d);
+                    var info_parsed = JsonConvert.DeserializeObject<List<SearchModel>>(info);
+
+                    return info_parsed;
                 }
                 else
                 {
-                    return new List<Dictionary<string, object>>() { er };
+                    var e = new SearchModel();
+                    e.Title = "Error";
+                    var ee = new List<SearchModel>();
+                    ee.Add(e);
+
+                    return ee;
                 }
             }
-
-            var a = new Dictionary<string, object>();
-            a.Add("Error", "False");
-            output.Add(a);
-
-            return output;
         }
     }
 }

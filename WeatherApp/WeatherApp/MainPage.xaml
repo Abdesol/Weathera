@@ -30,7 +30,7 @@
         <Label x:Name="date_created" Text="" FontSize="15" TextColor="White"  HorizontalOptions="Center" Margin="0,240,0,0"/>
 
 
-        <Frame HasShadow="True" Opacity="0.9"  BackgroundColor="#568EFD" Margin="10,320" Padding="0" HeightRequest="140" CornerRadius="10" VerticalOptions="Start">
+        <Frame HasShadow="True" Opacity="0.9"  BackgroundColor="#568EFD" Margin="10,320, 0, 0" Padding="0" HeightRequest="140" CornerRadius="10" VerticalOptions="Start">
             <Grid>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
                     <StackLayout Orientation="Vertical">

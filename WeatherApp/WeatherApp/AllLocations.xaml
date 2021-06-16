@@ -5,7 +5,14 @@
     <ContentPage.Content>
         <Grid>
             <Image Source="background.jpg" Aspect="AspectFill" VerticalOptions="StartAndExpand"/>
-            <StackLayout Orientation="Horizontal">
+            <Label
+                Text="Location Search"
+                FontSize="40"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                Padding="10"
+                />
+            <StackLayout Orientation="Horizontal" Margin="0,40" Padding="0,15">
                 <ImageButton x:Name="back_btn" Source="back.png"  Clicked="Back_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
                 <Entry x:Name="search_entry"
                        VerticalOptions="Start" 
@@ -16,20 +23,21 @@
                        BackgroundColor="Transparent"
                        />
                 <ImageButton x:Name="search_btn" Source="search.png"  Clicked="Search_Clicked" WidthRequest="30"   HeightRequest="42" HorizontalOptions="End" VerticalOptions="Start" Margin="20,25" BackgroundColor="Transparent"></ImageButton>
-                
+
             </StackLayout>
-            <ScrollView Margin="20,75">
-                <StackLayout 
-                    x:Name="search_layout" 
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand" 
-                    WidthRequest="500" 
-                    Margin="40,0" 
-                    Spacing="10" 
-                    Opacity="0.8"
-                    > 
-                </StackLayout>
-            </ScrollView>
+
+
+            <Frame Margin="30,150" Background="#5095FD" Opacity="0.7" CornerRadius="10">
+                <ScrollView>
+                    <StackLayout 
+                        x:Name="search_layout" 
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="StartAndExpand" 
+                        WidthRequest="500" 
+                        Margin="40,0" 
+                        Spacing="4"/>
+                </ScrollView>
+            </Frame>
         </Grid>
         
     </ContentPage.Content>

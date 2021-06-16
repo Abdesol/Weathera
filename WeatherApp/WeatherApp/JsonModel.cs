@@ -74,4 +74,14 @@ namespace WeatherApp
         public double? Visibility { get; set; }
 
     }
+
+    public partial class SearchModel
+    {
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        [JsonProperty("woeid")]
+        public long Woeid { get; set; }
+
+    }
 }
