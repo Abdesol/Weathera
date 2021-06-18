@@ -11,9 +11,7 @@ If you are disconnected from internet, still you can use the app. You can view t
 <img src="./img/splash.jpg" width=200px height=400px> 
 <b>
 <img src="./img/loading.jpg" width=200px height=400px> 
-
 <br>
-
 <img src="./img/main.jpg" width=200px height=400px> 
 <b>
 <img src="./img/search.jpg" width=200px height=400px> 
