@@ -19,7 +19,7 @@ If you are disconnected from internet, still you can use the app. You can view t
 <br>
 
 # Release
-If you want to try the app you can download it on play store following this link link or if you want to download the app directly go with this link link.
+If you want to try the app you can download it on play store following this link https://play.google.com/store/apps/details?id=com.abdesol.weathera or if you want to download the app directly go with this link https://github.com/Abdesol/Weathera/releases/.
 
 
 <br>
