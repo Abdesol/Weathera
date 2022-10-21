@@ -1,3 +1,6 @@
+<img width="1920" alt="Banner" src="https://user-images.githubusercontent.com/63385587/197229989-ee572063-3549-429c-aaf3-d5fa7c54fa97.png">
+
+
 # Weathera
 Weathera is a weather app that works on Android phone. It is made using C# framework called xamarin.<br>
 This app will automatically detect your current location and also you can view other cities weather status.<br>
